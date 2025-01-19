@@ -1,0 +1,85 @@
+Connection established to port 8000
+Message sent to port 8000: LIST
+List operation started
+Message received from port 8000: LIST 
+List operation successfully completed
+Message sent to port 8000: STORE file_to_store2 159
+Store operation started for file file_to_store2
+Message received from port 8000: STORE_TO 8001 8003 8002
+Controller replied to store file_to_store2 in these Dstores: 8001 8003 8002 
+Connection established to port 8001
+Message sent to port 8001: STORE file_to_store2 159
+Storing file file_to_store2 to Dstore 8001
+Message received from port 8001: ACK
+ACK received from Dstore 8001 to store file file_to_store2
+Store of file file_to_store2 to Dstore 8001 successfully completed
+Connection established to port 8003
+Message sent to port 8003: STORE file_to_store2 159
+Storing file file_to_store2 to Dstore 8003
+Message received from port 8003: ACK
+ACK received from Dstore 8003 to store file file_to_store2
+Store of file file_to_store2 to Dstore 8003 successfully completed
+Connection established to port 8002
+Message sent to port 8002: STORE file_to_store2 159
+Storing file file_to_store2 to Dstore 8002
+Message received from port 8002: ACK
+ACK received from Dstore 8002 to store file file_to_store2
+Store of file file_to_store2 to Dstore 8002 successfully completed
+Message received from port 8000: STORE_COMPLETE
+Store operation for file file_to_store2 completed
+Message sent to port 8000: STORE file_to_store2 159
+Store operation started for file file_to_store2
+Message received from port 8000: ERROR_FILE_ALREADY_EXISTS
+File to store file_to_store2 already exists in the data store
+Message sent to port 8000: LIST
+List operation started
+Message received from port 8000: LIST file_to_store2
+List operation successfully completed
+Message sent to port 8000: LOAD file_to_store2
+Load operation for file file_to_store2 started
+Message received from port 8000: LOAD_FROM 8001 159
+Controller replied to load file file_to_store2 (size: 159 bytes) from Dstore 8001
+Connection established to port 8001
+Message sent to port 8001: LOAD_DATA file_to_store2
+Loading file file_to_store2 from Dstore 8001
+Load operation of file file_to_store2 from Dstore 8001 successfully completed
+Message sent to port 8000: LOAD file_to_store2
+Load operation for file file_to_store2 started
+Message received from port 8000: LOAD_FROM 8001 159
+Controller replied to load file file_to_store2 (size: 159 bytes) from Dstore 8001
+Load operation for file file_to_store2 from Dstore 8001 failed
+Message sent to port 8000: RELOAD file_to_store2
+Retrying to load file file_to_store2
+Message received from port 8000: LOAD_FROM 8003 159
+Controller replied to load file file_to_store2 (size: 159 bytes) from Dstore 8003
+Load operation for file file_to_store2 from Dstore 8003 failed
+Message sent to port 8000: RELOAD file_to_store2
+Retrying to load file file_to_store2
+Message received from port 8000: LOAD_FROM 8002 159
+Controller replied to load file file_to_store2 (size: 159 bytes) from Dstore 8002
+Load operation for file file_to_store2 from Dstore 8002 failed
+Message sent to port 8000: REMOVE file_to_store2
+Remove operation for file file_to_store2 started
+Message received from port 8000: REMOVE_COMPLETE
+Remove operation for file file_to_store2 successfully completed
+Message sent to port 8000: REMOVE file_to_store2
+Remove operation for file file_to_store2 started
+Message received from port 8000: ERROR_FILE_DOES_NOT_EXIST
+Remove operation failed because file does not exist (filename: file_to_store2)
+Message sent to port 8000: LIST
+List operation started
+Message received from port 8000: LIST 
+List operation successfully completed
+Message sent to port 8000: STORE file_to_store2 5
+Store operation started for file file_to_store2
+Message received from port 8000: STORE_TO 8001 8003 8002
+Controller replied to store file_to_store2 in these Dstores: 8001 8003 8002 
+Timeout expired while reading from port 8000
+Message sent to port 8000: LOAD file_to_store4
+Load operation for file file_to_store4 started
+Message received from port 8000: ERROR_FILE_DOES_NOT_EXIST
+Load operation failed because file does not exist (filename: file_to_store4)
+Message sent to port 8000: REMOVE file_to_store4
+Remove operation for file file_to_store4 started
+Message received from port 8000: ERROR_FILE_DOES_NOT_EXIST
+Remove operation failed because file does not exist (filename: file_to_store4)

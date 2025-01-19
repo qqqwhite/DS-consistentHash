@@ -1,0 +1,85 @@
+Connection established to port 12345
+Message sent to port 12345: LIST
+List operation started
+Message received from port 12345: LIST 
+List operation successfully completed
+Message sent to port 12345: STORE file_to_store2 159
+Store operation started for file file_to_store2
+Message received from port 12345: STORE_TO 12346 12348 12347
+Controller replied to store file_to_store2 in these Dstores: 12346 12348 12347 
+Connection established to port 12346
+Message sent to port 12346: STORE file_to_store2 159
+Storing file file_to_store2 to Dstore 12346
+Message received from port 12346: ACK
+ACK received from Dstore 12346 to store file file_to_store2
+Store of file file_to_store2 to Dstore 12346 successfully completed
+Connection established to port 12348
+Message sent to port 12348: STORE file_to_store2 159
+Storing file file_to_store2 to Dstore 12348
+Message received from port 12348: ACK
+ACK received from Dstore 12348 to store file file_to_store2
+Store of file file_to_store2 to Dstore 12348 successfully completed
+Connection established to port 12347
+Message sent to port 12347: STORE file_to_store2 159
+Storing file file_to_store2 to Dstore 12347
+Message received from port 12347: ACK
+ACK received from Dstore 12347 to store file file_to_store2
+Store of file file_to_store2 to Dstore 12347 successfully completed
+Message received from port 12345: STORE_COMPLETE
+Store operation for file file_to_store2 completed
+Message sent to port 12345: STORE file_to_store2 159
+Store operation started for file file_to_store2
+Message received from port 12345: ERROR_FILE_ALREADY_EXISTS
+File to store file_to_store2 already exists in the data store
+Message sent to port 12345: LIST
+List operation started
+Message received from port 12345: LIST file_to_store2
+List operation successfully completed
+Message sent to port 12345: LOAD file_to_store2
+Load operation for file file_to_store2 started
+Message received from port 12345: LOAD_FROM 12346 159
+Controller replied to load file file_to_store2 (size: 159 bytes) from Dstore 12346
+Connection established to port 12346
+Message sent to port 12346: LOAD_DATA file_to_store2
+Loading file file_to_store2 from Dstore 12346
+Load operation of file file_to_store2 from Dstore 12346 successfully completed
+Message sent to port 12345: LOAD file_to_store2
+Load operation for file file_to_store2 started
+Message received from port 12345: LOAD_FROM 12346 159
+Controller replied to load file file_to_store2 (size: 159 bytes) from Dstore 12346
+Load operation for file file_to_store2 from Dstore 12346 failed
+Message sent to port 12345: RELOAD file_to_store2
+Retrying to load file file_to_store2
+Message received from port 12345: LOAD_FROM 12348 159
+Controller replied to load file file_to_store2 (size: 159 bytes) from Dstore 12348
+Load operation for file file_to_store2 from Dstore 12348 failed
+Message sent to port 12345: RELOAD file_to_store2
+Retrying to load file file_to_store2
+Message received from port 12345: LOAD_FROM 12347 159
+Controller replied to load file file_to_store2 (size: 159 bytes) from Dstore 12347
+Load operation for file file_to_store2 from Dstore 12347 failed
+Message sent to port 12345: REMOVE file_to_store2
+Remove operation for file file_to_store2 started
+Message received from port 12345: REMOVE_COMPLETE
+Remove operation for file file_to_store2 successfully completed
+Message sent to port 12345: REMOVE file_to_store2
+Remove operation for file file_to_store2 started
+Message received from port 12345: ERROR_FILE_DOES_NOT_EXIST
+Remove operation failed because file does not exist (filename: file_to_store2)
+Message sent to port 12345: LIST
+List operation started
+Message received from port 12345: LIST 
+List operation successfully completed
+Message sent to port 12345: STORE file_to_store2 5
+Store operation started for file file_to_store2
+Message received from port 12345: STORE_TO 12346 12348 12347
+Controller replied to store file_to_store2 in these Dstores: 12346 12348 12347 
+Timeout expired while reading from port 12345
+Message sent to port 12345: LOAD file_to_store4
+Load operation for file file_to_store4 started
+Message received from port 12345: ERROR_FILE_DOES_NOT_EXIST
+Load operation failed because file does not exist (filename: file_to_store4)
+Message sent to port 12345: REMOVE file_to_store4
+Remove operation for file file_to_store4 started
+Message received from port 12345: ERROR_FILE_DOES_NOT_EXIST
+Remove operation failed because file does not exist (filename: file_to_store4)
